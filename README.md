@@ -1,19 +1,85 @@
 # Kmeans-Implementation-and-Analysis
 
-Problem Statement:
+ 
+What is Clustering?
 
-1.A: What is the most common reason for calling 911?
+K-Means Clustering is a clustering algorithm and is considered to be an Unsupervised Learning technique.
+It is used to divide a group of data points into clusters, where each point in the cluster is similar to each other.
 
-1.B: Display these results graphically
 
-2.A: Please create a graph of the 911 calls using the 'Latitude' and 'Longitude' (graph type is up to you) (differentiate call type using colors)
+Centroids
 
-2.B: Are there any data points that look mislabeled?
+Simple: the center point of a cluster.
+If K=3 (we want to find 3 clusters, then we would have 3 centroids, or centers, one for each cluster
 
-3.A: If we were to use only 'Latitude' and 'Longitude', could we make an intelligent decision as to why a resident dialed 911? (In other words, if we take off the labels - can we still determine which category a 911 call would most likely fall into?) Please describe this algorithm and your reason for choosing it.
+Distance measures how similar two elements are and will influence the shape of the clusters.
 
-3.B: Does the algorithm chosen utilize Euclidean distance? Should we be concerned that 'Latitude' and 'Longitude' are not necessarily Euclidean?
+To achieve accurate clustering, you need to:
 
-3.C: Please display the results of your algorithm, along with the associated code 3.D: Please display the number of correct categorizations
+1. Choose the right distance metric
+2. Have good intuition behind your data
 
-3.E: What insight can we extract from this analysis?
+
+Distance → Dissimilarity
+
+Smaller the distance → More Similarity BIGGER the distance → Less Similarity
+
+Objective: To minimize total intra-cluster variance (e.g. Sum of Squared Error SSE)
+
+Minimize Error: The error is the distance of each observation to the nearest cluster
+
+Seperation: Observations in different clusters are dissimiliar to each other
+
+❏ Homogeneity: Observations in the same cluster are similar to each other
+
+❏ Find natural groupings
+
+ Basic Steps for Clustering
+ 
+● Preprocessing
+
+○ Normalization/Standardization
+
+● Distance/Similarity Measure
+
+○ Similarity of two feature vectors
+
+● Clustering Criterion 
+
+○ Based on cost function
+
+● Clustering Algorithms 
+
+○ Based on clustering algorithm
+
+● Validation/Interpretation
+
+
+  Finding K - Elbow Method
+  
+GOAL: To identify when the set of clusters explains “most” of the variance in the data.
+
+X - Number of Clusters
+Y - Within SSE (Cumulative variance explained)
+
+Since increasing K will always decrease our metric, the “elbow point” will allow us to see where the rate of decrease sharply shifts
+
+We want to find the point where the distortion remains constant, even if we increase K further
+
+In short...
+
+The “ELBOW” is where the cumulative variance starts to FLATTEN OUT.
+
+And adding in new clusters beyond this point only yields relatively small increase in variance.
+
+Performance:
+
+It is measured by checking the number of correct categorization in the cluster!!
+   
+ 
+ 
+ 
+ 
+ 
+ 
+
